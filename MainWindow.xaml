@@ -1,0 +1,28 @@
+﻿<Window x:Class="BookReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookReader"
+        mc:Ignorable="d"
+        Title="BookReader" Height="638" Width="717" Background="#FF6CA5B3" MinWidth="720" MinHeight="720">
+    <Grid Margin="0,0,0,0" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnAddBook" Content="Добавить книгу" HorizontalAlignment="Left" Margin="10,10,0,0" Click="btnAddBook_Click" VerticalAlignment="Top"   Height="24" Width="150" Background="#FF58B2F7" FontFamily="Segoe Print" FontWeight="Bold" FontSize="11" />
+        <Button x:Name="btnAddBookmark" Content="Добавить закладку" HorizontalAlignment="Left" Margin="10,40,0,0" Click="btnAddBookmark_Click" VerticalAlignment="Top" Height="24" Width="150" Visibility="Visible" FontFamily="Segoe Print" FontSize="11" FontWeight="Bold" Background="#FFD2A041" Foreground="Black" IsEnabled="False"/>
+        <Button x:Name="btnOpenBook" Content="Открыть книгу" HorizontalAlignment="Left" Margin="165,10,0,0" Click="btnOpenBook_Click" VerticalAlignment="Top" Height="24" Width="150" FontFamily="Segoe Print" FontSize="11" FontWeight="Bold" Background="#FF58B2F7"/>
+        <ComboBox x:Name="cmbLib" HorizontalAlignment="Left" Margin="320,10,0,0" VerticalAlignment="Top" Width="150" Height="24" FontFamily="Segoe Print" FontWeight="Bold" FontSize="11" Background="#FF58B2F7"/>
+        <TextBox x:Name="readingNow" HorizontalAlignment="Center" Margin="0,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="614" FontFamily="Segoe Print" FontSize="14" FontWeight="Bold" Background="{x:Null}" Text="" HorizontalContentAlignment="Center" Height="27"/>
+        <FlowDocumentPageViewer x:Name="textFlower" Margin="10,102,6,10" BorderBrush="#FF58B2F7" BorderThickness="1" Background="#FF58B1FB" Foreground="Black">
+            <FlowDocument ColumnWidth="400" IsOptimalParagraphEnabled="True" IsHyphenationEnabled="True">
+            </FlowDocument>
+        </FlowDocumentPageViewer>
+        <ComboBox x:Name="cmbBookmark" HorizontalAlignment="Left" Margin="320,40,0,0" VerticalAlignment="Top" Width="150" Height="24" IsEnabled="False" Background="#FFD2A041"/>
+        <Button x:Name="btnGoToBookMark" Content="Перейти к закладке" HorizontalAlignment="Left" Margin="165,40,0,0" VerticalAlignment="Top" Height="24" Click="goToBM_Click" Width="150" Background="#FFD2A041" FontFamily="Segoe Print" FontSize="11" FontWeight="Bold" IsEnabled="False" Foreground="Black"/>
+        <Button x:Name="btnDelBook" Content="Удалить книгу" HorizontalAlignment="Left" Margin="475,10,0,0" Click="btnDelBook_Click" VerticalAlignment="Top" Width="150" Height="24" Background="#FF58B2F7" FontFamily="Segoe Print" FontSize="11" FontWeight="Bold"/>
+        <Button x:Name="btnDelBookMark" Content="Удалить заметку" HorizontalAlignment="Left" Margin="475,40,0,0" Click="btnDelBookMark_Click"  VerticalAlignment="Top" Height="24" Width="150" Background="#FFD2A041" FontFamily="Segoe Print" FontSize="11" FontWeight="Bold" IsEnabled="False"/>
+    </Grid>
+</Window>
